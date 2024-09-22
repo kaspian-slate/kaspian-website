@@ -1,0 +1,61 @@
+/* Artwork Section */
+
+.artwork {
+    height: 100vh; /* Use auto to let it adjust based on content */
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cloudy blue.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 10%;
+}
+
+.artwork-content h2,
+.artwork-grid {
+    opacity: 0; /* Text is hidden initially */
+    transition: opacity 1s ease; /* Smooth transition of opacity */
+    z-index: 3; /* Text layer above the overlay */
+}
+
+.artwork-content h2 {
+    animation: revealText 0.5s forwards 2s;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.artwork-grid {
+    animation: revealText 0.5s forwards 2.3s;
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between items */
+}
+
+.artwork-item {
+    text-align: center; /* Center align text under images */
+}
+
+.artwork-item img {
+    width: 100%; /* Make images responsive */
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.artwork-item img:hover {
+    transform: scale(1.05);
+}
+
+.description {
+    margin-top: 10px; /* Space between image and description */
+    color: #ffffff; /* Change text color for better contrast */
+    font-size: 16px; /* Adjust font size as needed */
+}

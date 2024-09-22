@@ -49,7 +49,7 @@ body {
 
 .home {
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cloudy\ blue.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/cloudy_blue.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -307,7 +307,7 @@ body {
 /* About Section */
 .about {
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cloudy\ blue.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/cloudy_blue.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -343,10 +343,11 @@ body {
 }
 
 /* Gallery Section */
-.gallery {
-    height: 100vh; /* Use auto to let it adjust based on content */
+.gallery,
+.artwork {
+    height: 100vh; /* Adjust based on content */
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cloudy blue.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/cloudy_blue.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -356,65 +357,7 @@ body {
 }
 
 .gallery-content h2,
-.gallery-grid {
-    opacity: 0; /* Text is hidden initially */
-    transition: opacity 1s ease; /* Smooth transition of opacity */
-    z-index: 3; /* Text layer above the overlay */
-}
-
-.gallery-content h2 {
-    animation: revealText 0.5s forwards 2s;
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.gallery-grid {
-    animation: revealText 0.5s forwards 2.3s;
-    font-size: 32px;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px; /* Space between items */
-}
-
-.gallery-item {
-    text-align: center; /* Center align text under images */
-}
-
-.gallery-item img {
-    width: 100%; /* Make images responsive */
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.05);
-}
-
-.description {
-    margin-top: 10px; /* Space between image and description */
-    color: #ffffff; /* Change text color for better contrast */
-    font-size: 16px; /* Adjust font size as needed */
-}
-
-/* Artwork Section */
-.artwork {
-    height: 100vh; /* Use auto to let it adjust based on content */
-    text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cloudy blue.webp');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 100px 10%;
-}
-
+.gallery-grid,
 .artwork-content h2,
 .artwork-grid {
     opacity: 0; /* Text is hidden initially */
@@ -422,6 +365,7 @@ body {
     z-index: 3; /* Text layer above the overlay */
 }
 
+.gallery-content h2,
 .artwork-content h2 {
     animation: revealText 0.5s forwards 2s;
     font-size: 32px;
@@ -429,44 +373,88 @@ body {
     margin-bottom: 20px;
 }
 
-.artwork-grid {
-    animation: revealText 0.5s forwards 2.3s;
-    font-size: 32px;
-    font-weight: 500;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
+.gallery-grid,
 .artwork-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-columns: repeat(3, 1fr); /* Two columns */
     gap: 20px; /* Space between items */
+    animation: revealText 0.5s forwards 2.3s;
 }
 
+.gallery-item,
 .artwork-item {
     text-align: center; /* Center align text under images */
 }
 
+/* Basic gallery item styles */
+.gallery-item img,
 .artwork-item img {
-    width: 100%; /* Make images responsive */
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Keep images square */
+    object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s;
+    cursor: pointer; /* Indicate image is clickable */
 }
 
+.gallery-item img:hover,
 .artwork-item img:hover {
     transform: scale(1.05);
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: auto;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+/* :target selector to show the modal when an image is clicked */
+.modal:target {
+    display: flex; /* Show the modal */
+}
+
+/* Close button styles */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .description {
     margin-top: 10px; /* Space between image and description */
     color: #ffffff; /* Change text color for better contrast */
-    font-size: 16px; /* Adjust font size as needed */
+    font-size: 20px; /* Adjust font size as needed */
 }
+
+.description a{
+    color: #ffffff;
+}
+
+
 /* Contact Section */
 .contact {
     height: 100vh;
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cloudy\ blue.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/cloudy_blue.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -501,7 +489,7 @@ body {
 /* Updated Button Box Styles for Stacked Buttons */
 .bttn-box {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Stack buttons vertically */
+    grid-template-columns: repeat(2,1fr); /* Stack buttons vertically */
     gap: 15px; /* Space between each button */
     justify-items: center;
     margin-top: 40px;
