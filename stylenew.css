@@ -306,14 +306,26 @@ body {
 
 /* About Section */
 .about {
-    padding: 100px 10%;
-    background: rgba(8, 27, 41, 0.9);
-    color: #ededed;
-    text-align: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cloudy\ blue.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.about-content h2,
+.about-content p {
+    opacity: 0; /* Text is hidden initially */
+    transition: opacity 1s ease; /* Smooth transition of opacity */
+    z-index: 3; /* Text layer above the overlay */
 }
 
 .about-content h2 {
-    font-size: 36px;
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
@@ -322,27 +334,60 @@ body {
     line-height: 1.6;
 }
 
-/* Gallery Section */
-.gallery {
-    padding: 100px 10%;
-    background: #081b29;
-    color: #ededed;
-    text-align: center;
+.about-content h2 {
+    animation: revealText 0.5s forwards 2s;
 }
 
-.gallery h2 {
-    font-size: 36px;
+.about-content p {
+    animation: revealText 0.5s forwards 2.3s;
+}
+
+/* Gallery Section */
+.gallery {
+    height: 100vh; /* Use auto to let it adjust based on content */
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cloudy blue.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 10%;
+}
+
+.gallery-content h2,
+.gallery-grid {
+    opacity: 0; /* Text is hidden initially */
+    transition: opacity 1s ease; /* Smooth transition of opacity */
+    z-index: 3; /* Text layer above the overlay */
+}
+
+.gallery-content h2 {
+    animation: revealText 0.5s forwards 2s;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    animation: revealText 0.5s forwards 2.3s;
+    font-size: 32px;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between items */
+}
+
+.gallery-item {
+    text-align: center; /* Center align text under images */
 }
 
 .gallery-item img {
-    width: 100%;
+    width: 100%; /* Make images responsive */
     border-radius: 8px;
     transition: transform 0.3s;
 }
@@ -351,27 +396,59 @@ body {
     transform: scale(1.05);
 }
 
-/* Artwork Section */
-.artwork {
-    padding: 100px 10%;
-    background: rgba(8, 27, 41, 0.9);
-    color: #ededed;
-    text-align: center;
+.description {
+    margin-top: 10px; /* Space between image and description */
+    color: #ffffff; /* Change text color for better contrast */
+    font-size: 16px; /* Adjust font size as needed */
 }
 
-.artwork h2 {
-    font-size: 36px;
+/* Artwork Section */
+.artwork {
+    height: 100vh; /* Use auto to let it adjust based on content */
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cloudy blue.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 10%;
+}
+
+.artwork-content h2,
+.artwork-grid {
+    opacity: 0; /* Text is hidden initially */
+    transition: opacity 1s ease; /* Smooth transition of opacity */
+    z-index: 3; /* Text layer above the overlay */
+}
+
+.artwork-content h2 {
+    animation: revealText 0.5s forwards 2s;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.artwork-grid {
+    animation: revealText 0.5s forwards 2.3s;
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
 .artwork-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between items */
+}
+
+.artwork-item {
+    text-align: center; /* Center align text under images */
 }
 
 .artwork-item img {
-    width: 100%;
+    width: 100%; /* Make images responsive */
     border-radius: 8px;
     transition: transform 0.3s;
 }
@@ -380,47 +457,97 @@ body {
     transform: scale(1.05);
 }
 
+.description {
+    margin-top: 10px; /* Space between image and description */
+    color: #ffffff; /* Change text color for better contrast */
+    font-size: 16px; /* Adjust font size as needed */
+}
 /* Contact Section */
 .contact {
-    padding: 100px 10%;
-    background: #081b29;
-    color: #ededed;
+    height: 100vh;
     text-align: center;
-}
-
-.contact h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.contact-form {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cloudy\ blue.webp');
+    background-size: cover;
+    background-position: center;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 400px;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 10%;
+}
+.contact-content {
+    width: 90%;
+    max-width: 1200px;
+    align-items: center;
+    padding: 20px;
 }
 
-.contact-form input, .contact-form textarea {
-    padding: 10px;
+.bttn-box {
+    opacity: 0; /* Text is hidden initially */
+    transition: opacity 1s ease; /* Smooth transition of opacity */
+    z-index: 3; /* Text layer above the overlay */
+}
+
+.contact-content h2 {
+    opacity: 0; /* Text is hidden initially */
+    transition: opacity 1s ease; /* Smooth transition of opacity */
+    z-index: 3; /* Text layer above the overlay */
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: revealText 0.5s forwards 2s; /* Ensure this matches your animation timing */
+}
+
+/* Updated Button Box Styles for Stacked Buttons */
+.bttn-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Stack buttons vertically */
+    gap: 15px; /* Space between each button */
+    justify-items: center;
+    margin-top: 40px;
+    animation: revealText 0.5s forwards 2.9s;
+}
+
+.bttn-box a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: #081b29; /* Same background color for all buttons */
     border: 2px solid #00abf0;
-    border-radius: 5px;
-    background: transparent;
-    color: #ededed;
-    font-size: 16px;
-}
-
-.contact-form button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #00abf0;
-    color: #081b29;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #00abf0;
+    text-decoration: none;
     font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
 }
 
-.contact-form button:hover {
-    background: #007bbd;
+.bttn-box a:hover {
+    color: #081b29;
+}
+
+.bttn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0; /* Change color on hover */
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.bttn-box a:hover::before {
+    width: 100%; /* Fill background color on hover */
+}
+
+.bttn-box {
+    animation: revealText 0.5s forwards 2.6s;
 }
