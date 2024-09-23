@@ -459,8 +459,8 @@ body {
     background-position: center;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 100px 10%;
+    align-items: flex-start ;/*was flex-start*/
+    padding: 13% 10%;
 }
 .contact-content {
     width: 90%;
@@ -489,8 +489,8 @@ body {
 /* Updated Button Box Styles for Stacked Buttons */
 .bttn-box {
     display: grid;
-    grid-template-columns: repeat(2,1fr); /* Stack buttons vertically */
-    gap: 15px; /* Space between each button */
+    grid-template-columns: repeat(1,1fr); /* Stack buttons vertically */
+    gap: 30px; /* Space between each button */
     justify-items: center;
     margin-top: 40px;
     animation: revealText 0.5s forwards 2.9s;
@@ -502,7 +502,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50px;
+    height: 100px;
     background: #081b29; /* Same background color for all buttons */
     border: 2px solid #00abf0;
     border-radius: 8px;
