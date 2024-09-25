@@ -59,3 +59,15 @@
     color: #ffffff; /* Change text color for better contrast */
     font-size: 16px; /* Adjust font size as needed */
 }
+
+
+
+
+
+    color: #ededed;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;

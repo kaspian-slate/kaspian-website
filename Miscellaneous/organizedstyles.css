@@ -9,9 +9,17 @@
 
 body {
     color: #ededed;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
 }
 
+/* ===================== */
+/*      HEADER SECTION   */
+/* ===================== */
 .header {
     position: fixed;
     top: 0;
@@ -23,8 +31,10 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    opacity: 0; /* Navbar hidden initially */
-    animation: revealText 0.5s forwards 1.4s; /* Reveal navbar with delay */
+    opacity: 0;
+    /* Navbar hidden initially */
+    animation: revealText 0.5s forwards 1.4s;
+    /* Reveal navbar with delay */
 }
 
 .logo {
@@ -51,21 +61,10 @@ body {
 /* ===================== */
 /*       HOME SECTION    */
 /* ===================== */
-
 .home {
-    min-height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/cloudy_blue.webp');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    display: flex;
     align-items: center;
     padding: 0 10%;
-}
-
-.home-content {
-    max-width: 600px;
 }
 
 .home-content h1,
@@ -84,7 +83,6 @@ body {
     font-weight: 700;
     line-height: 1.2;
 }
-
 .home-content h1::before {
     content: '';
     position: absolute;
@@ -136,9 +134,6 @@ body {
     animation-delay: 1.6s;
     z-index: 2;
 }
-
-/* ====== Buttons ====== */
-
 .home-content .btn-box {
     position: relative;
     display: flex;
@@ -159,6 +154,8 @@ body {
     animation-delay: 1.9s;
     z-index: 2;
 }
+
+/* ====== Buttons ====== */
 
 .btn-box a {
     position: relative;
@@ -322,13 +319,7 @@ body {
 /* ===================== */
 
 .about {
-    min-height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/cloudy_blue.webp');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    display: flex;
     align-items: center;
     padding: 0 10%;
 }
@@ -366,14 +357,8 @@ body {
 
 .gallery,
 .artwork {
-    min-height: 100vh; /* Adjust based on content */
     text-align: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/cloudy_blue.webp');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    display: flex;
     justify-content: center;
     align-items: flex-start;
     padding: 100px 10%;
@@ -479,14 +464,8 @@ body {
 /* ===================== */
 
 .contact {
-    min-height: 100vh;
     text-align: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/cloudy_blue.webp');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    display: flex;
     justify-content: center;
     align-items: flex-start ;
     padding: 13% 10%;
@@ -496,12 +475,6 @@ body {
     max-width: 1200px;
     align-items: center;
     padding: 20px;
-}
-
-.bttn-box {
-    opacity: 0; /* Text is hidden initially */
-    transition: opacity 1s ease; /* Smooth transition of opacity */
-    z-index: 3; /* Text layer above the overlay */
 }
 
 .contact-content h2 {
@@ -516,6 +489,12 @@ body {
 }
 
 /* ====== Buttons ====== */
+
+.bttn-box {
+    opacity: 0; /* Text is hidden initially */
+    transition: opacity 1s ease; /* Smooth transition of opacity */
+    z-index: 3; /* Text layer above the overlay */
+}
 
 .bttn-box {
     display: grid;
