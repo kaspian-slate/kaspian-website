@@ -323,14 +323,14 @@ body {
 
 .about {
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/cloudy_blue.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/pexels-felixmittermeier-956981.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    padding: 0 10%;
+    padding: 100px 10%;
 }
 
 .about-content h2,
@@ -350,6 +350,8 @@ body {
 .about-content p {
     font-size: 18px;
     line-height: 1.6;
+    text-indent: 30px; /* Adjust the value as needed */
+    margin-bottom: 15px; /* Add space between paragraphs */
 }
 
 .about-content h2 {
@@ -364,11 +366,24 @@ body {
 /*  Gallery and Artwork  */
 /* ===================== */
 
-.gallery,
+.gallery {
+    min-height: 100vh; /* Adjust based on content */
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/photo-1464802686167-b939a6910659.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 10%;
+}
+
 .artwork {
     min-height: 100vh; /* Adjust based on content */
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/cloudy_blue.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/wp5569709.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -481,7 +496,7 @@ body {
 .contact {
     min-height: 100vh;
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/cloudy_blue.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/thumb-1920-805172.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -495,7 +510,7 @@ body {
     width: 90%;
     max-width: 1200px;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .bttn-box {
