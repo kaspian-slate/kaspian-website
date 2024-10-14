@@ -54,7 +54,7 @@ body {
 
 .home {
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/cloudy_blue.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Background_Options/dark\ blue\ wp.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
